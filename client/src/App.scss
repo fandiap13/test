@@ -81,6 +81,8 @@ input {
       .hamburger-menu {
         display: none;
         cursor: pointer;
+        margin-bottom: 10px;
+        color: var(--dark-color);
 
         @media (max-width: 768px) {
           display: block;
@@ -89,6 +91,10 @@ input {
 
       .area-top-heading {
         margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
         .heading {
           color: var(--dark-color);
           font-size: 24px;
@@ -132,6 +138,11 @@ input {
   }
 
   .content-main {
+    margin-top: 16px;
+    color: var(--dark-color);
+  }
+
+  .content-main-dashboard {
     margin-top: 16px;
     display: grid;
     // align-items: start;
@@ -419,8 +430,8 @@ input {
   }
 
   &.btn-primary {
-    color: var(--danger-primary);
-    background-color: var(--light-danger-color);
+    color: white;
+    background-color: var(--primary-color);
   }
 
   &.btn-search-tools {
@@ -565,4 +576,79 @@ table {
   -webkit-background-clip: text; /* Background clip for Webkit (Chrome, Safari, Opera) */
   background-clip: text; /* Background clip for Firefox */
   color: transparent; /* Make text transparent */
+}
+
+.loading-icon {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-color);
+  gap: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+}
+
+.input-style {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 16px;
+  font-style: var(--font-family-quicksand);
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  /* Styles for focused input */
+  &:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  /* Styles for hovered input */
+  &:hover {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+}
+
+label.label-style {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+
+  // /* Styles for focused label */
+  // &:focus-within {
+  //   color: #007bff;
+  // }
+
+  // /* Styles for hovered label */
+  // &:hover {
+  //   color: #0056b3;
+  // }
+
+  // /* Styles for disabled label */
+  // &:disabled {
+  //   color: #6c757d;
+  // }
+}
+
+.form-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
